@@ -19,6 +19,10 @@ function norm(s) {
 const index = {};
 for (const drug of drugsDB.drugs) {
   index[norm(drug.name)] = drug;
+  // 商品名/別名也能查到（如 Cravit → Levofloxacin）
+  if (Array.isArray(drug.aliases)) {
+    for (const a of drug.aliases) index[norm(a)] = drug;
+  }
 }
 
 // ---- 各分級的回補建議 ----
@@ -52,7 +56,7 @@ function buildReply(drug) {
   if (drug.animal_data) tags.push("⚠️ 動物數據");
   if (drug.plasma_only) tags.push("⚠️ 僅血漿濃度數據，建議 TDM 確認");
   return (
-    `💊 ${drug.name}（${drug.category}）\n` +
+    `💊 ${drug.name}\n` +
     `${r.desc}\n` +
     `${r.action}\n` +
     (tags.length ? `${tags.join("、")}\n` : "") +
@@ -64,7 +68,13 @@ function buildReply(drug) {
 function search(text) {
   const q = norm(text);
   if (index[q]) return [index[q]];
-  return drugsDB.drugs.filter((d) => norm(d.name).includes(q));
+  // 片段比對：學名或任一別名包含查詢字串
+  return drugsDB.drugs.filter((d) => {
+    if (norm(d.name).includes(q)) return true;
+    if (Array.isArray(d.aliases))
+      return d.aliases.some((a) => norm(a).includes(q));
+    return false;
+  });
 }
 
 function handleEvent(event) {
