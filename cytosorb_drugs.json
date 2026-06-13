@@ -1,0 +1,107 @@
+{
+  "_meta": {
+    "source": "CytoSorb Drug Removal Table B1550R01ENG2026",
+    "reference": "Scheier J et al. Crit Care Explor 2022;4(5):e0688",
+    "disclaimer": "最終劑量監測與調整由開立處方醫師決定。建議盡可能進行 TDM 治療藥物監測。CytoSorb 臨床/臨床前數據不可外推至其他產品。",
+    "note": "italic=動物數據(Animal data)；** 僅有全身血漿濃度數據(systemic plasma levels only)"
+  },
+  "levels": {
+    "significant_invivo": {
+      "label": "顯著（活體數據）",
+      "criteria": ">25% 清除率上升，或 >30% 移除率",
+      "advice": "可能需要調整劑量"
+    },
+    "significant_invitro": {
+      "label": "顯著（試管數據）",
+      "criteria": ">30% 移除率，但無活體數據",
+      "advice": "可能需要調整劑量"
+    },
+    "insignificant_invivo": {
+      "label": "不顯著（活體數據）",
+      "criteria": "清除率上升可忽略(<25%) 或移除率低(<30%)",
+      "advice": "似乎不需調整劑量"
+    },
+    "insignificant_invitro": {
+      "label": "不顯著（試管數據）",
+      "criteria": "<30% 移除率，但無活體數據",
+      "advice": "似乎不需調整劑量"
+    }
+  },
+  "drugs": [
+    {"name": "Amphotericin B", "category": "抗微生物製劑", "level": "significant_invivo", "animal_data": true},
+    {"name": "Cefiderocol", "category": "抗微生物製劑", "level": "significant_invivo"},
+    {"name": "Ceftazidime", "category": "抗微生物製劑", "level": "significant_invivo"},
+    {"name": "Fluconazole", "category": "抗微生物製劑", "level": "significant_invivo", "animal_data": true},
+    {"name": "Levofloxacin", "category": "抗微生物製劑", "level": "significant_invivo"},
+    {"name": "Linezolid", "category": "抗微生物製劑", "level": "significant_invivo"},
+    {"name": "Posaconazole", "category": "抗微生物製劑", "level": "significant_invivo", "animal_data": true},
+    {"name": "Teicoplanin", "category": "抗微生物製劑", "level": "significant_invivo"},
+    {"name": "Tobramycin", "category": "抗微生物製劑", "level": "significant_invivo", "animal_data": true},
+    {"name": "Vancomycin", "category": "抗微生物製劑", "level": "significant_invivo"},
+    {"name": "Apixaban", "category": "抗血栓/抗凝血劑", "level": "significant_invivo"},
+    {"name": "Bivalirudin", "category": "抗血栓/抗凝血劑", "level": "significant_invivo"},
+    {"name": "Ticagrelor", "category": "抗血栓/抗凝血劑", "level": "significant_invivo", "plasma_only": true},
+    {"name": "Amlodipin", "category": "心血管藥物", "level": "significant_invivo", "plasma_only": true},
+    {"name": "Bisoprolol", "category": "心血管藥物", "level": "significant_invivo", "plasma_only": true},
+    {"name": "Digitoxin", "category": "心血管藥物", "level": "significant_invivo"},
+    {"name": "Digoxin", "category": "心血管藥物", "level": "significant_invivo", "plasma_only": true},
+    {"name": "Flecainide", "category": "心血管藥物", "level": "significant_invivo"},
+    {"name": "Verapamil", "category": "心血管藥物", "level": "significant_invivo", "plasma_only": true},
+    {"name": "Amitriptyline", "category": "抗癲癇/抗憂鬱藥物", "level": "significant_invivo"},
+    {"name": "Bromazepam", "category": "抗癲癇/抗憂鬱藥物", "level": "significant_invivo"},
+    {"name": "Clozapine", "category": "抗癲癇/抗憂鬱藥物", "level": "significant_invivo"},
+    {"name": "Imipramine", "category": "抗癲癇/抗憂鬱藥物", "level": "significant_invivo"},
+    {"name": "Lamotrigine", "category": "抗癲癇/抗憂鬱藥物", "level": "significant_invivo"},
+    {"name": "Quetiapine", "category": "抗癲癇/抗憂鬱藥物", "level": "significant_invivo"},
+    {"name": "Valproic acid", "category": "抗癲癇/抗憂鬱藥物", "level": "significant_invivo"},
+    {"name": "Venlafaxine", "category": "抗癲癇/抗憂鬱藥物", "level": "significant_invivo", "plasma_only": true},
+    {"name": "Ibuprofen", "category": "其他藥物", "level": "significant_invivo", "plasma_only": true},
+
+    {"name": "Cefotaxim", "category": "抗微生物製劑", "level": "significant_invitro"},
+    {"name": "Cefuroxim", "category": "抗微生物製劑", "level": "significant_invitro"},
+    {"name": "Gentamycin", "category": "抗微生物製劑", "level": "significant_invitro"},
+    {"name": "Moxifloxacin", "category": "抗微生物製劑", "level": "significant_invitro"},
+    {"name": "Remdesivir/GS-441524", "category": "抗微生物製劑", "level": "significant_invitro"},
+    {"name": "Voriconazol", "category": "抗微生物製劑", "level": "significant_invitro"},
+    {"name": "Argatroban", "category": "抗血栓/抗凝血劑", "level": "significant_invitro"},
+    {"name": "Dabigatran", "category": "抗血栓/抗凝血劑", "level": "significant_invitro"},
+    {"name": "Edoxaban", "category": "抗血栓/抗凝血劑", "level": "significant_invitro"},
+    {"name": "Rivaroxaban", "category": "抗血栓/抗凝血劑", "level": "significant_invitro"},
+    {"name": "Amiodarone", "category": "心血管藥物", "level": "significant_invitro"},
+    {"name": "Levosimendan", "category": "心血管藥物", "level": "significant_invitro"},
+    {"name": "Methylene blue", "category": "心血管藥物", "level": "significant_invitro"},
+    {"name": "Carbamazepine", "category": "抗癲癇/抗憂鬱藥物", "level": "significant_invitro"},
+    {"name": "Diazepam", "category": "抗癲癇/抗憂鬱藥物", "level": "significant_invitro"},
+    {"name": "Oxacarbazepine", "category": "抗癲癇/抗憂鬱藥物", "level": "significant_invitro"},
+    {"name": "Phenytoin", "category": "抗癲癇/抗憂鬱藥物", "level": "significant_invitro"},
+    {"name": "Mercaptopurine", "category": "免疫抑制劑", "level": "significant_invitro"},
+    {"name": "Methotrexate", "category": "免疫抑制劑", "level": "significant_invitro"},
+    {"name": "Sirolimus", "category": "免疫抑制劑", "level": "significant_invitro"},
+    {"name": "Iodixanol", "category": "其他藥物", "level": "significant_invitro"},
+
+    {"name": "Amikacin", "category": "抗微生物製劑", "level": "insignificant_invivo"},
+    {"name": "Anidulafungin", "category": "抗微生物製劑", "level": "insignificant_invivo", "animal_data": true},
+    {"name": "Cefepime", "category": "抗微生物製劑", "level": "insignificant_invivo", "animal_data": true},
+    {"name": "Ceftriaxone", "category": "抗微生物製劑", "level": "insignificant_invivo", "animal_data": true},
+    {"name": "Ciprofloxacine", "category": "抗微生物製劑", "level": "insignificant_invivo", "animal_data": true},
+    {"name": "Clarithromycin", "category": "抗微生物製劑", "level": "insignificant_invivo", "animal_data": true},
+    {"name": "Clindamycin", "category": "抗微生物製劑", "level": "insignificant_invivo"},
+    {"name": "Flucloxacillin", "category": "抗微生物製劑", "level": "insignificant_invivo", "animal_data": true},
+    {"name": "Ganciclovir", "category": "抗微生物製劑", "level": "insignificant_invivo", "animal_data": true},
+    {"name": "Meropenem", "category": "抗微生物製劑", "level": "insignificant_invivo"},
+    {"name": "Metronidazole", "category": "抗微生物製劑", "level": "insignificant_invivo", "animal_data": true},
+    {"name": "Piperacillin", "category": "抗微生物製劑", "level": "insignificant_invivo"},
+    {"name": "Basiliximab", "category": "免疫抑制劑", "level": "insignificant_invivo", "animal_data": true},
+    {"name": "Cyclosporine A", "category": "免疫抑制劑", "level": "insignificant_invivo", "animal_data": true},
+    {"name": "Everolimus", "category": "免疫抑制劑", "level": "insignificant_invivo", "animal_data": true},
+    {"name": "Methylprednisolon", "category": "免疫抑制劑", "level": "insignificant_invivo", "animal_data": true},
+    {"name": "Mycophenolate mofetil (MMF)", "category": "免疫抑制劑", "level": "insignificant_invivo"},
+    {"name": "Prednisolone", "category": "免疫抑制劑", "level": "insignificant_invivo", "animal_data": true},
+    {"name": "Tacrolimus", "category": "免疫抑制劑", "level": "insignificant_invivo", "animal_data": true},
+    {"name": "Metformin", "category": "其他藥物", "level": "insignificant_invivo"},
+    {"name": "Paracetamol (Acetaminophen)", "category": "其他藥物", "level": "insignificant_invivo"},
+
+    {"name": "Adrenaline/Epinephrine", "category": "心血管藥物", "level": "insignificant_invitro"},
+    {"name": "Noradrenaline/Norepinephrine", "category": "心血管藥物", "level": "insignificant_invitro"}
+  ]
+}

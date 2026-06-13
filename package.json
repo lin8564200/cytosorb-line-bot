@@ -1,0 +1,13 @@
+{
+  "name": "cytosorb-line-bot",
+  "version": "1.0.0",
+  "description": "CytoSorb drug interaction LINE bot - 自動查表回覆 72 種藥物",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@line/bot-sdk": "^9.4.0",
+    "express": "^4.21.2"
+  }
+}
