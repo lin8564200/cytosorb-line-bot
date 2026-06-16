@@ -51,6 +51,23 @@ const DOSE_RULE = {
 
 // ---- 組回覆訊息 ----
 function buildReply(drug) {
+  // 理化推估藥（無原廠實測數據）走降級表述，不給 dose
+  if (drug.level === "theoretical" && drug.estimate) {
+    const e = drug.estimate;
+    return (
+      `💊 ${drug.name}\n` +
+      `⚠️ 此藥無 CytoSorb 原廠實測數據，以下為理化性質「理論推估」，非實證結果\n` +
+      `\n推估依據：\n` +
+      `・分子量：${e.mw}\n` +
+      `・親脂性 logP：${e.logp}\n` +
+      `・分布體積 Vd：${e.vd}\n` +
+      (e.binding ? `・蛋白結合率：${e.binding}\n` : "") +
+      `\n👉 理論傾向：${e.tendency}\n` +
+      `\n⚠️ ${e.caveat}\n` +
+      `務必併行 TDM／臨床監測，由開立醫師判斷。\n` +
+      `（參數來源：${e.source}，僅供參考，需藥師核對）`
+    );
+  }
   const r = DOSE_RULE[drug.level];
   const tags = [];
   if (drug.animal_data) tags.push("⚠️ 動物數據");

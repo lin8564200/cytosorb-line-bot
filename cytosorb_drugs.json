@@ -102,6 +102,43 @@
     {"name": "Paracetamol (Acetaminophen)", "category": "其他藥物", "level": "insignificant_invivo"},
 
     {"name": "Adrenaline/Epinephrine", "category": "心血管藥物", "level": "insignificant_invitro"},
-    {"name": "Noradrenaline/Norepinephrine", "category": "心血管藥物", "level": "insignificant_invitro"}
+    {"name": "Noradrenaline/Norepinephrine", "category": "心血管藥物", "level": "insignificant_invitro"},
+
+    {"name": "Fentanyl", "category": "理化推估（無實測）", "level": "theoretical", "estimate": {
+      "mw": "約 337 Da（<60 kDa ✓ 可進入吸附劑孔隙）",
+      "logp": "約 4（高度親脂 ✓ 傾向被吸附）",
+      "vd": "約 4 L/kg（大，文獻差異極大 60–300+ L/70kg）",
+      "binding": "約 80–85%",
+      "tendency": "小分子＋高親脂 → 可能被吸附；但 Vd 大、會蓄積於肌肉脂肪再緩慢釋回血液 → CytoSorb 實際能清除的總量有限",
+      "caveat": "兩項條件相反，無法推定淨效應，不提供回補劑量建議。",
+      "source": "PubChem / FDA label / 臨床藥動文獻"
+    }},
+    {"name": "Propofol", "category": "理化推估（無實測）", "level": "theoretical", "estimate": {
+      "mw": "約 178 Da（<60 kDa ✓ 可進入吸附劑孔隙）",
+      "logp": "約 3.8（高度親脂 ✓ 傾向被吸附）",
+      "vd": "約 2–10 L/kg（極大，誘導劑中最高）",
+      "binding": "約 95–99%",
+      "tendency": "小分子＋極高親脂＋高蛋白結合 → 理論上易被吸附；但 Vd 極大、廣泛分布至全身脂肪 → 血中佔比低，清除對總體影響有限",
+      "caveat": "高親脂與高蛋白結合可能增加吸附，但 Vd 極大限制整體清除效果，無法推定淨效應，不提供回補劑量建議。",
+      "source": "PubChem / StatPearls / 臨床藥動文獻"
+    }},
+    {"name": "Tazobactam", "category": "理化推估（無實測）", "level": "theoretical", "estimate": {
+      "mw": "約 300 Da（<60 kDa ✓ 可進入吸附劑孔隙）",
+      "logp": "低（親水性，傾向不被親脂性吸附劑吸附）",
+      "vd": "小（約 0.4–0.5 L/kg，近細胞外液量）",
+      "binding": "約 20–30%（低）",
+      "tendency": "親水、低蛋白結合、Vd 小 → 對親脂性的 CytoSorb 吸附傾向低；惟此類小分子在血液淨化中常有一定清除（文獻指 CRRT 清除率高），建議比照 beta-lactam 監測",
+      "caveat": "理化性質傾向不被 CytoSorb 顯著吸附，但缺乏實測數據，不提供回補劑量建議。",
+      "source": "PubChem / ScienceDirect / CRRT 藥動文獻"
+    }},
+    {"name": "Caspofungin", "category": "理化推估（無實測）", "level": "theoretical", "estimate": {
+      "mw": "約 1093 Da（較大但仍 <60 kDa）",
+      "logp": "中等",
+      "vd": "小（約 0.15 L/kg，主要在血液/肝）",
+      "binding": "約 97%（極高）",
+      "tendency": "極高蛋白結合＋Vd 小 → 藥物大多以結合形式留在血液，理論上有被吸附的可能性；分子量較大可能降低進入孔隙效率",
+      "caveat": "高蛋白結合且 Vd 小，理論上可能被吸附，但分子量偏大且無實測數據，不提供回補劑量建議。",
+      "source": "PubChem / StatPearls / 臨床藥動文獻"
+    }}
   ]
 }
